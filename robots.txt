@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://oubp.github.io/style-guide/sitemap.xml.gz
