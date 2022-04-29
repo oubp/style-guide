@@ -12,27 +12,30 @@
     <!-- Primary Meta Tags -->
     <title>Урок 2</title>
     <meta name="title" content="Урок 2">
-    <meta name="description" content="(Ещё не доступно.)" />
+    <meta name="description" content="В этом разделе будут рассмотрены блочные и линейные типы елментов, а также их практическая польза. CSS свойство" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://oubp.github.io/style-guide/lesson2/">
     <meta property="og:title" content="Урок 2">
-    <meta property="og:description" content="(Ещё не доступно.)">
+    <meta property="og:description" content="В этом разделе будут рассмотрены блочные и линейные типы елментов, а также их практическая польза. CSS свойство">
+    <meta property="og:image" content="https://media.discordapp.net/attachments/924298354152857670/969522735334187048/unknown.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://oubp.github.io/style-guide/lesson2/">
     <meta property="twitter:title" content="Урок 2">
-    <meta property="twitter:description" content="(Ещё не доступно.)">
+    <meta property="twitter:description" content="В этом разделе будут рассмотрены блочные и линейные типы елментов, а также их практическая польза. CSS свойство">
+    <meta property="twitter:image" content="https://media.discordapp.net/attachments/924298354152857670/969522735334187048/unknown.png">
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("/style-guide/doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="/style-guide/resources/css/retype.css?v=2.2.703928646519" rel="stylesheet" data-turbo-track="reload" />
+    <link href="/style-guide/resources/css/retype.css?v=2.2.704540331137" rel="stylesheet" data-turbo-track="reload" />
 
-    <script type="text/javascript" src="/style-guide/resources/js/config.js?v=2.2.703928646519" defer data-turbo-track="reload"></script>
+    <script type="text/javascript" src="/style-guide/resources/js/config.js?v=2.2.704540331137" defer data-turbo-track="reload"></script>
     <script type="text/javascript" src="/style-guide/resources/js/retype.js?v=2.2" defer data-turbo-track="reload"></script>
-    <script id="lunr-js" type="text/javascript" src="/style-guide/resources/js/lunr.js?v=2.2.703928646519" defer></script>
+    <script id="lunr-js" type="text/javascript" src="/style-guide/resources/js/lunr.js?v=2.2.704540331137" defer></script>
+    <script id="prism-js" type="text/javascript" src="/style-guide/resources/js/prism.js?v=2.2.704540331137" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -162,13 +165,108 @@
     </div>
 </div>
 
-<doc-anchor-target id="в-этом-разделе-будут-рассмотрены-блочные-и-линейные-типы-стилей-а-также-их-практическая-польза">
-    <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#в-этом-разделе-будут-рассмотрены-блочные-и-линейные-типы-стилей-а-также-их-практическая-польза">#</doc-anchor-trigger>
-        <span>В этом разделе будут рассмотрены блочные и линейные типы стилей, а также их практическая польза</span>
-    </h4>
+<p>В этом разделе будут рассмотрены блочные и линейные типы елментов, а также их практическая польза.
+CSS свойство <code v-pre>display</code> определяет тип отображения елемента. Каждый из типов разнообразен и имеет свою конкретную задачу.
+Здесь мы рассмотрим отображение <code v-pre>block</code>, <code v-pre>inline</code>, <code v-pre>inline-block</code> и <code v-pre>none</code></p>
+<doc-anchor-target id="общая-запись">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#общая-запись">#</doc-anchor-trigger>
+        <span>Общая запись</span>
+    </h2>
 </doc-anchor-target>
-<p>(Ещё не доступно.)</p>
+<p>Чтобы задать CSS свойство используется известная Вам конструкция:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-css"><code v-pre class="language-css">p {
+  display: &lt;тип&gt;;
+}</code></pre>
+</doc-codeblock></div>
+<p>Где <code v-pre>p</code> — параграф — категория элементов, к которым будет применён стиль.</p>
+<doc-anchor-target id="display-none">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#display-none">#</doc-anchor-trigger>
+        <span>display: none</span>
+    </h3>
+</doc-anchor-target>
+<p>Самое простое значение. Элемент не показывается, вообще. Как будто его и нет.</p>
+<doc-panel id="html-пример">
+    <template #title>HTML пример</template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-markup"><code v-pre class="language-markup">&lt;head&gt;
+  &lt;style&gt;
+    a {
+      display: none;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  Рекламное агенство &lt;a href=&quot;#&quot;&gt;&quot;Эврика&quot;&lt;/a&gt; приглашает всех в свой новый ресторан
+&lt;/body&gt;</code></pre>
+</doc-codeblock></div>
+<p><figure class="content-center">
+    <img src="https://media.discordapp.net/attachments/924298354152857670/969522735334187048/unknown.png" alt="Элемент &lt;a&gt; не отображается браузером" />
+    <figcaption class="caption">Элемент &lt;a&gt; не отображается браузером</figcaption>
+</figure>
+</p>
+</doc-panel>
+<doc-anchor-target id="блочное-отображение-display-block">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#блочное-отображение-display-block">#</doc-anchor-trigger>
+        <span>Блочное отображение <code v-pre>display: block</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Блочные элементы располагаются один над другим, вертикально.<br />
+Они стремятся расшириться во всю доступную ширину.<br />
+По задумке как блок отображаются элементы <em>разметки</em>, например, параграфы и заголовки (<code v-pre>p</code>, <code v-pre>h1</code>, <code v-pre>h2</code>, <code v-pre>h3</code>...) или разделы.<br />
+<figure class="content-center">
+    <img src="https://cdn.discordapp.com/attachments/924298354152857670/969494818218704926/unknown.png" alt="Элементы распологаются вертикально" />
+    <figcaption class="caption">Элементы распологаются вертикально</figcaption>
+</figure>
+<figure class="content-center">
+    <img src="https://media.discordapp.net/attachments/924298354152857670/969510058180362280/unknown.png" alt="h1 занимает всё пространство" />
+    <figcaption class="caption">h1 занимает всё пространство</figcaption>
+</figure>
+</p>
+<p>Мы добавили <code v-pre>background: pink</code>, чтобы показать то, что блочные элементы действительно занимают всю возможную ширину.</p>
+<doc-anchor-target id="линейное-отображение-display-inline">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#линейное-отображение-display-inline">#</doc-anchor-trigger>
+        <span>Линейное отображение <code v-pre>display: inline</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Элементы располагаются на той же строке, последовательно.<br />
+Ширина и высота элемента определяются по содержимому. Поменять их нельзя.
+<figure class="content-center">
+    <img src="https://media.discordapp.net/attachments/924298354152857670/969519878836998144/unknown.png" alt="i, a, b идут в линию" />
+    <figcaption class="caption">i, a, b идут в линию</figcaption>
+</figure>
+</p>
+<doc-anchor-target id="линейный-блок-display-inline-block">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#линейный-блок-display-inline-block">#</doc-anchor-trigger>
+        <span>Линейный-блок? <code v-pre>display: inline-block</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Этот тип используют, чтобы отобразить в одну строку блочные элементы, в том числе разных размеров.</p>
+<p><strong>Как и инлайн-элемент:</strong><br />
+• Располагается в строке.<br />
+• Размер устанавливается по содержимому.
+• Не расстягиваются во всю ширину.</p>
+<p><strong>Во всём остальном – это блок, то есть:</strong><br />
+• Элемент всегда прямоугольный.<br />
+• Можно установить размер с помощью width/height.</p>
+<doc-anchor-target id="итоги">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#итоги">#</doc-anchor-trigger>
+        <span>Итоги</span>
+    </h2>
+</doc-anchor-target>
+<p>Чтобы изменить тип отображения элемента используется свойство <code v-pre>display</code></p>
+<ul>
+<li><code v-pre>none:</code> Элемент не отображается вообще</li>
+<li><code v-pre>block:</code> Занимает все пространство в ширину от чего все элементы идут вертикально</li>
+<li><code v-pre>inline</code> Ведёт себя как обычный текст. Элементы идут последовательно.</li>
+<li><code v-pre>inline-block</code> Ведёт себя как <code v-pre>inline</code>, но поддается изменению размера</li>
+</ul>
 
                                 
                                 <!-- Required only on API pages -->
@@ -178,7 +276,7 @@
                             
                                 <nav class="flex mt-14">
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r rounded-l-lg transition-colors duration-150 relative hover:z-5" href="/style-guide/lesson1/">
+                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="/style-guide/lesson1/">
                                             <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                             <span>
                                                 <span class="block text-xs font-normal text-gray-400 dark:text-dark-400">Previous</span>
@@ -188,6 +286,13 @@
                                     </div>
                             
                                     <div class="w-1/2">
+                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="/style-guide/lesson3/">
+                                            <span>
+                                                <span class="block text-xs font-normal text-right text-gray-400 dark:text-dark-400">Next</span>
+                                                <span class="block mt-1">Урок 3</span>
+                                            </span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+                                        </a>
                                     </div>
                                 </nav>
                             </footer>
@@ -228,6 +333,6 @@
 
     <div id="docs-overlay-target"></div>
 
-    <script>window.__DOCS__ = { "title": "Урок 2", icon: "file", hasPrism: false, hasMermaid: false, hasMath: false }</script>
+    <script>window.__DOCS__ = { "title": "Урок 2", icon: "file", hasPrism: true, hasMermaid: false, hasMath: false }</script>
 </body>
 </html>
